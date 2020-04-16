@@ -40,6 +40,7 @@ export class MoltinClient {
         customer_token,
         host,
         version,
+        language,
         headers: classHeaders
       }
     } = this
@@ -72,6 +73,7 @@ export class MoltinClient {
       Authorization: `Bearer ${access_token}`,
       ...(application && { 'X-MOLTIN-APPLICATION': application }),
       ...(currency && { 'X-MOLTIN-CURRENCY': currency }),
+      ...(language && { 'X-MOLTIN-LANGUAGE': language }),
       ...(customer_token && { 'X-MOLTIN-CUSTOMER-TOKEN': customer_token }),
       ...customHeaders
     }

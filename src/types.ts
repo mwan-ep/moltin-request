@@ -8,6 +8,7 @@ export interface InitOptions {
   application?: string
   currency?: string
   customer_token?: string
+  language?: string
   headers?: Headers
 }
 
@@ -18,6 +19,7 @@ export interface Options {
   customer_token?: string
   host?: string
   version?: string
+  language?: string
   headers?: Headers
 }
 
